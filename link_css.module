@@ -33,11 +33,11 @@ function link_css_css_alter(&$css) {
 
     // Show IE warning.
     if ($config->get('link_css_warn_ie_limit') && $count > 31) {
-      drupal_set_message(t('Internet Explorer <=7 which will not load more than 31
+      \Drupal::messenger()->addWarning(t('Internet Explorer <=7 which will not load more than 31
         linked stylesheets. The current page links to @count. Disable Link CSS
         module or turn on CSS aggregation to ensure compatibility.', array(
           '@count' => $count,
-        )), 'warning');
+        )));
     }
   }
 }

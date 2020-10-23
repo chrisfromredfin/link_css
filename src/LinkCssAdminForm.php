@@ -37,8 +37,8 @@ class LinkCssAdminForm extends ConfigFormBase {
     $form = array();
 
     if ($system_css_preprocess) {
-      drupal_set_message(
-        t('<a href="/admin/config/development/performance">Aggregate CSS files</a> is turned on! This development module working when <em>Aggregate CSS files</em> is turned off.', array()), 'warning');
+      $this->messenger()->addWarning(
+        t('<a href="/admin/config/development/performance">Aggregate CSS files</a> is turned on! This development module working when <em>Aggregate CSS files</em> is turned off.', array()));
     }
 
     $form['link_css_skip_system'] = array(
