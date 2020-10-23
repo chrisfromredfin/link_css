@@ -1,0 +1,6 @@
+{
+    "name": "chrisfromredfin/link_css",
+    "description": "Link CSS module, ported to Drupal 9.",
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
